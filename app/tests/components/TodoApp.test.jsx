@@ -21,6 +21,9 @@ describe('TodoApp',  () => {
 		todoApp.handleAddTodo(todoText);
 
 		expect(todoApp.state.todos[0].text).toBe(todoText);
+		//Expect createdAt to be  number
+		expect(todoApp.state.todos[0].createdAt).toBeA('number');
 	});
 
 });
+
